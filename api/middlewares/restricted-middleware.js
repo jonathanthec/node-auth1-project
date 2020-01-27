@@ -24,4 +24,10 @@ function checkPassword(req, res, next) {
     }
 }
 
-module.exports = checkPassword;
+function checkSession(req, res, next) {
+
+}
+
+module.exports = {
+    checkPassword
+};
