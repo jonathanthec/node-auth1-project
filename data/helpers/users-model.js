@@ -24,5 +24,5 @@ function add(user) {
 module.exports = {
     find,
     findBy,
-    orderBy
+    add
 }
