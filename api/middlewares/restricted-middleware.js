@@ -16,7 +16,7 @@ function checkPassword(req, res, next) {
                     res.status(401).json({ message: 'invalid credentials' });
                 }
             })
-            .catch(error => {
+            .catch(() => {
                 res.status(500).json({ message: 'unexpected error' })
             });
     }

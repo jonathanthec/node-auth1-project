@@ -15,9 +15,9 @@ function findBy(property) {
 function add(user) {
     return Users('users')
         .insert(user, 'id')
-        .then(userId => {
-            const { id } = userId;
-            findBy({ id })
+        .then(ids => {
+            const [id] = ids;
+            return findBy({ id });
         })
 }
 
