@@ -7,6 +7,9 @@ module.exports = {
     useNullAsDefault: true,
     migration: {
       directory: './data/migrations'
+    },
+    seeds: {
+      directory: './data/seeds'
     }
   },
 };
