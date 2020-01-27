@@ -9,6 +9,7 @@ function checkPassword(req, res, next) {
             .first()
             .then(user => {
                 if(user && bcrypt.compareSync(password, user.password)) {
+                    req.session.userId = user.id;
                     next();
                 }
                 else {
@@ -33,7 +34,16 @@ function checkSession(req, res, next) {
     }
 }
 
+function checkUser(req, res, next) {
+    const { username, password } = req.body;
+    if(!username || !password) {
+        res.status(401).json({ message: 'you need username and password to sign up' });
+    }
+    next();
+}
+
 module.exports = {
     checkPassword,
-    checkSession
+    checkSession,
+    checkUser
 };
