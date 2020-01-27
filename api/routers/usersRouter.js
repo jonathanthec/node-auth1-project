@@ -8,8 +8,8 @@ router.post('/register', (req, res) => {
 })
 
 router.post('/login', checkPassword, (req, res) => {
-
-})
+    res.status(200).json({ message: `Welcome, ${req.headers.username}!` });
+});
 
 router.get('/users', (req, res) => {
 

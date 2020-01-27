@@ -8,7 +8,7 @@ function find() {
 
 function findBy(property) {
     return Users('users')
-        .where({ property })
+        .where(property)
         .first();
 }
 
