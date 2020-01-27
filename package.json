@@ -1,0 +1,29 @@
+{
+  "name": "auth1-project",
+  "version": "1.0.0",
+  "description": "Lambda Week 15 Monday & Tuesday project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanthec/node-auth1-project.git"
+  },
+  "author": "Jonathan Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanthec/node-auth1-project/issues"
+  },
+  "homepage": "https://github.com/jonathanthec/node-auth1-project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.8",
+    "knex-cleaner": "^1.3.0",
+    "sqlite3": "^4.1.1"
+  }
+}
