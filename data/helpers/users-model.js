@@ -2,7 +2,7 @@ const Users = require('../dbConfig');
 
 function find() {
     return Users('users')
-        .select('id', 'username')
+        .select('id', 'username', 'password')
         .orderBy('id', 'asc');
 }
 
